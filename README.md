@@ -52,7 +52,8 @@ $ pip install -r requirements.txt
 ```
 
 # Example Functionality
-![Individual Letter Prediction](https://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_predict_0.gif | width=100)
+![Individual Letter Prediction](https://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_predict_0.gif)
+<img src="https://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_predict_0.gif" width="25%" height="25%">
 
 ## Author
 
