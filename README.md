@@ -52,7 +52,7 @@ $ pip install -r requirements.txt
 ```
 
 # Example Functionality
-![Individual Letter Prediction](https://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_predict_0.gif)
+![Individual Letter Prediction](http://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_predict_0.gif)
 
 ## Author
 
@@ -64,5 +64,3 @@ Jeremiah Palmerston
 - MIT license provided herein
 
 ## Acknowledgement
-
-[Jeff Wu(@WuTheFWasThat)](https://github.com/WuTheFWasThat), [Thomas Wolf(@thomwolf)](https://github.com/thomwolf) for allowing referring code.
