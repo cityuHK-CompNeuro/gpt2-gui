@@ -1,4 +1,4 @@
-# Amazon Review Generator
+# Amazon Review Generator (Q1)
 ### via Fine-Tuned GPT2 and Pytorch
 I fine-tuned a pre-trained GPT2 model to predict text and generate amazon reviews. This model can instantaneously predict text on next-letter and next-word levels. I fine-tuned the model three times on three product categories from the Amazon Reviews Dataset: CDs and Vinyl (Music), Prime Pantry (Kitchen), and Pet Supplies. 
   
