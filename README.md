@@ -43,7 +43,7 @@ $ pip install -r requirements.txt
 ```
 
 # Example Functionality
-![Individual Letter Prediction](https://github.com/cityuHK-CompNeuro/gpt2-gui/tree/main/README_support/text_prediction.gif)
+![Individual Letter Prediction](/README_support/text_prediction.gif)
 
 # Design Thinking
 What are the most powerful NLP models available to date? Large-Language Models and Transformer Architectures.
