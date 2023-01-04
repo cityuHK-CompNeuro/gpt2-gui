@@ -45,7 +45,7 @@ $ pip install -r requirements.txt
 # Example Functionality
 ![Individual Letter Prediction](/README_support/text_prediction.gif)  
   
-![Example Artist Prediction](/README_support/frank_z.PNG)  
+<!-- ![Example Artist Prediction](/README_support/frank_z.PNG)   -->
   
 
 # Design Thinking
