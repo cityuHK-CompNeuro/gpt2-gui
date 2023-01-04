@@ -29,7 +29,6 @@ Three models are made available for download and loading in the UI: Music, Kitch
   
 ## Quick Start
 
-1. Download GPT2 pre-trained model in Pytorch which huggingface/pytorch-pretrained-BERT already made!
 ```Windows CMD
 $ git clone https://github.com/cityuHK-CompNeuro/gpt2-gui.git  
 $ chdir gpt-gui  
@@ -37,11 +36,12 @@ $ chdir gpt-gui
 $ pip install -r requirements.txt
 ```
 
-2. Run textbox_UI_trained.py
+Run textbox_UI_trained.py
 ```
 $ python textbox_UI_trained.py
 ```
-3. Type into the text box as though writing an Amazon review for your favorite music album  
+  
+Type into the text box as though writing an Amazon review for your favorite music album  
 - Hint: start by typing the name of your favorite musician  
   
 
