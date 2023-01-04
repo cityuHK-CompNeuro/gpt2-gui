@@ -6,7 +6,7 @@ Open-Source Pre-Trained Large Language Models have created new opportunities for
   
 The model was fine-tuned to predict and generate text in the style of an Amazon product review. Pre-trained GPT2 was fine-tuned on three product categories in the Amazon Reviews Dataset: Music, Kitchen, and Pets. These model parameters have been made available along with this repository.
   
-The front-end GUI was built via PySimpleGUI in Python, and allows the user to:
+I built the front-end GUI via PySimpleGUI, with three features for user-friendliness:
 1. Input text for auto-completion
 2. Generate entire "Amazon Reviews" from the input text
 3. Load fine-tuned GPT2 models from local directories 
@@ -14,7 +14,7 @@ The front-end GUI was built via PySimpleGUI in Python, and allows the user to:
 ## Dataset
 [Amazon Reviews 2018 dataset](https://jmcauley.ucsd.edu/data/amazon/)  
   
-Three product categories were used to fine-tune GPT2:
+I used three product categories to fine-tune GPT2:
 1. CDs and Vinyl (Music)
 2. Prime Pantry (Kitchen)
 3. Pet Supplies (Pets)
