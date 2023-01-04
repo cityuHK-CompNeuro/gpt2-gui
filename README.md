@@ -46,11 +46,11 @@ $ python textbox_UI_trained.py
   
 
 ## Dependencies
-pytorch
-numpy
-PySimpleGUI
-Hugging Face transformers
-
+pytorch  
+numpy  
+PySimpleGUI  
+Hugging Face transformers  
+  
 # Example Functionality
 I created an animated gif to illustrate the text generation function.  
 Please wait for the gif to load (or download it!) to see the UI interaction work in real-time  
