@@ -64,10 +64,47 @@ def text_generator(model, text_in, **kwargs):
 
     return text_list_out
 
+
+def load_model_window():
+    try:
+        sg.theme('DarkGray')
+        load_layout = [[sg.Text("Model:", s=15, justification="r"), sg.I(key="-IN-"), sg.FolderBrowse()],
+                        [sg.Button('Load Model')]]
+
+        load_win = sg.Window("Load Model", load_layout)
+
+        while True:
+            event, values = load_win.read()
+            if event in (sg.WINDOW_CLOSED, "Exit"):
+                break
+            elif event == '-IN-':
+                print(values["-IN-"])
+            elif event == 'Load Model':
+                model_path = values["-IN-"]
+                device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+                if os.path.exists(model_path):
+                    model = GPT2LMHeadModel.from_pretrained(model_path)
+                    tokenizer = GPT2Tokenizer.from_pretrained(model_path)
+                    model.to(device)
+
+                else:
+                    print('Please download Fine-Tuned GPT2 model')
+
+                load_win.close()
+                return values["-IN-"], model, tokenizer
+
+        load_win.close()
+    except Exception as e:
+        sg.popup_error_with_traceback(f'Unable to Load Model via load_data_window.', e)
+
+
 ## Main
 sg.theme('DarkGray')
+menu_def = [["File", ['Load Model', 'Exit']]]
 
-layout = [[sg.Text("Enter Text Prompt:"), sg.Input(key='-NAME-', do_not_clear=True, size=(50, 1))],
+layout = [[sg.MenubarCustom(menu_def, tearoff=False)],
+          [sg.Text("Enter Text Prompt:"), sg.Input(key='-NAME-', do_not_clear=True, size=(50, 1))],
           [sg.Text('Type your query in the box. Suggested Text Will Appear Here', key='-TEXT-')],
           [sg.Button('Generate Text'), sg.Exit()]]
 
@@ -75,7 +112,8 @@ layout = [[sg.Text("Enter Text Prompt:"), sg.Input(key='-NAME-', do_not_clear=Tr
 prompts = []
 
 # Create the window
-window = sg.Window("Text Input", layout)
+window = sg.Window("Text Input", layout,
+                    use_custom_titlebar=True,)
 
 model_path = 'D:\\Coding\\sandbox\\gpt2_train\\model_save\\20221228_2153'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -86,8 +124,12 @@ if os.path.exists(model_path):
     model.to(device)
 
 else:
-    print('Please download gpt2-pytorch_model.bin')
-    sys.exit()
+    try:
+        model_path, model, tokenizer = load_model_window()
+        model.to(device)
+    except Exception as e:
+        sg.popup('Please download Fine-Tuned GPT2 model')
+        sys.exit()
 
 old_text = ''
 
@@ -109,5 +151,11 @@ while True:
             window['-TEXT-'].update(f"{suggested_text_list[0]}")
             old_text = values['-NAME-']
             # time.sleep(0.3)
+    elif event == 'Load Model':
+        try:
+            model_path, model, tokenizer = load_model_window()
+        except:
+            sg.popup('Please download Fine-Tuned GPT2 model')
+            sys.exit()
 
 window.close()

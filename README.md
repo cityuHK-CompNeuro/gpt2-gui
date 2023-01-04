@@ -52,10 +52,14 @@ PySimpleGUI
 Hugging Face transformers  
   
 # Example Functionality
-I created an animated gif to illustrate the text generation function.  
-Please wait for the gif to load (or download it!) to see the UI interaction work in real-time  
+I created animated gifs to illustrate the UI function.  
+Please wait for the gifs to load (or download them!) to see the UI interaction work in real-time  
   
 ![Individual Letter Prediction](/README_support/text_prediction.gif)  
+  
+<!-- ![Example Artist Prediction](/README_support/frank_z.PNG)   -->
+  
+![Review Generation](/README_support/My_gen.gif)  
   
 <!-- ![Example Artist Prediction](/README_support/frank_z.PNG)   -->
   
