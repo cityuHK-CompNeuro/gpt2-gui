@@ -43,6 +43,8 @@ $ pip install -r requirements.txt
 ```
 
 # Example Functionality
+* This is an animated gif of the text generation function. Please wait for it to load (or download it!) to see it work in real-time  
+  
 ![Individual Letter Prediction](/README_support/text_prediction.gif)  
   
 <!-- ![Example Artist Prediction](/README_support/frank_z.PNG)   -->
