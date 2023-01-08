@@ -145,12 +145,16 @@ while True:
         sg.popup(format_input_information(values, model))
     elif event == sg.TIMEOUT_KEY:
         if old_text != values['-NAME-']: # and  ' ' in values['-NAME-']:
-            suggested_text_list = text_generator(model, values['-NAME-'], length=10)
-            # oneword_updater = suggested_text.split()[:2]
-            # oneword_out = ' '.join(map(str,oneword_updater))
-            window['-TEXT-'].update(f"{suggested_text_list[0]}")
-            old_text = values['-NAME-']
-            # time.sleep(0.3)
+            try:
+                suggested_text_list = text_generator(model, values['-NAME-'], length=10)
+                # oneword_updater = suggested_text.split()[:2]
+                # oneword_out = ' '.join(map(str,oneword_updater))
+                window['-TEXT-'].update(f"{suggested_text_list[0]}")
+                old_text = values['-NAME-']
+            except:
+                old_text = values['-NAME-']
+                print('Yes, triggered except')
+
     elif event == 'Load Model':
         try:
             model_path, model, tokenizer = load_model_window()
